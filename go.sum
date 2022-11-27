@@ -1,0 +1,6 @@
+github.com/compression-algorithm-research-lab/go-varint v0.0.0-20221127141716-08e64be62856 h1:9JTAw9roxGXImEQFVhmrigg+GzpWK6ASyXuoYnskXgI=
+github.com/compression-algorithm-research-lab/go-varint v0.0.0-20221127141716-08e64be62856/go.mod h1:QzcFfo4K24GHMgyvTF0iQJDFYQG9LiMbRK3dFxCPOP0=
+github.com/compression-algorithm-research-lab/go-zigzag v0.0.0-20221127181654-f3180667f35f h1:tYJkI782TigIodHjv14pxCJwzX75/eFY0V5la+9Dkr4=
+github.com/compression-algorithm-research-lab/go-zigzag v0.0.0-20221127181654-f3180667f35f/go.mod h1:xEIqHDARrh2uoSNToTKjePD67VMdJrLjvBXeydujh3Y=
+github.com/golang-infrastructure/go-gtypes v0.0.1 h1:hnM1OYSwLPLGkZ4C6ecAxgmAUaPTjnhnUtRNmJj4p6c=
+github.com/golang-infrastructure/go-gtypes v0.0.1/go.mod h1:vFMCxFzxdMInvTtgLZRlWI1rS+mui88sMbL5I+zu1hg=
