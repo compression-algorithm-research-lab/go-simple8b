@@ -31,6 +31,7 @@ func Encode[T gtypes.Integer](slice []T) []byte {
 
 	// 然后就按照这个来存储了
 	for _, value := range slice {
+		// 结合zigzag算法，可以用来压缩负数
 		result = append(result, IntToBytes(zigzag.ToZigZag(value), blockSize)...)
 	}
 
@@ -61,23 +62,10 @@ func DecodeE[T gtypes.Integer](bytes []byte) ([]T, error) {
 	return result, nil
 }
 
-// IntToBytes 把给定的整数的低n位转换为字节数组
-func IntToBytes[T gtypes.Integer](value T, blockSize int) []byte {
-	result := make([]byte, blockSize)
-	for index := range result {
-		byteValue := (uint64(0xFF) << index) & uint64(value)
-		result[index] = uint8(byteValue)
-	}
-	return result
+func EncodeToBytes[T gtypes.Integer](slice []T) []byte {
+
 }
 
-// BytesToInt 把字节转为整数
-func BytesToInt[T gtypes.Integer](bytes []byte) T {
-	var r uint64
-	weight := 0
-	for _, x := range bytes {
-		r = r | (uint64(x) << weight)
-		weight += 8
-	}
-	return T(r)
+func DecodeFromBytes[T gtypes.Integer](bytes []byte) ([]T, error) {
+
 }
