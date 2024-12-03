@@ -36,19 +36,20 @@ const (
 
 // WhichMode 判断给定的无符号整数适合用哪种压缩模式
 func WhichMode[T gtypes.Unsigned](value T) Mode {
-	if value <= 1 {
+	v := int64(value)
+	if v <= 1 {
 		return Mode0BitPacking1
-	} else if value <= 15 {
+	} else if v <= 15 {
 		return Mode1BitPacking4
-	} else if value <= 255 {
+	} else if v <= 255 {
 		return Mode2BitPacking8
-	} else if value <= 4095 {
+	} else if v <= 4095 {
 		return Mode3BitPacking12
-	} else if value <= 65535 {
+	} else if v <= 65535 {
 		return Mode4BitPacking16
-	} else if value <= 1048575 {
+	} else if v <= 1048575 {
 		return Mode5BitPacking20
-	} else if value <= 16777215 {
+	} else if v <= 16777215 {
 		return Mode6BitPacking24
 	} else {
 		return Mode7DirectMode

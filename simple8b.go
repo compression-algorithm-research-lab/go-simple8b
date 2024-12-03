@@ -62,10 +62,10 @@ func DecodeE[T gtypes.Integer](bytes []byte) ([]T, error) {
 	return result, nil
 }
 
-func EncodeToBytes[T gtypes.Integer](slice []T) []byte {
-
-}
-
-func DecodeFromBytes[T gtypes.Integer](bytes []byte) ([]T, error) {
-
-}
+//func EncodeToBytes[T gtypes.Integer](slice []T) []byte {
+//
+//}
+//
+//func DecodeFromBytes[T gtypes.Integer](bytes []byte) ([]T, error) {
+//
+//}
